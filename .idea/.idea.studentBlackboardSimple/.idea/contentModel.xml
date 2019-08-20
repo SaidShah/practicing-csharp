@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\saidm\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\saidm\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_studentBlackboardSimple.1290444623.00" t="ExcludeRecursive" />
+    <e p="C:\Users\saidm\Desktop\Projects\studentBlackboardSimple" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="studentBlackboardSimple" t="IncludeRecursive">
+        <e p="Administrator.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="studentBlackboardSimple.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Person.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Student.cs" t="Include" />
+        <e p="studentBlackboardSimple.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="studentBlackboardSimple.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
