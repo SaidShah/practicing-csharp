@@ -8,6 +8,7 @@
       <e p="studentBlackboardSimple" t="IncludeRecursive">
         <e p="Administrator.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Grade.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

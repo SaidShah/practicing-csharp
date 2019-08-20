@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6108b355-01ac-404b-89e1-9b95b03f13bb" name="Default Changelist" comment="" />
+    <list default="true" id="6108b355-01ac-404b-89e1-9b95b03f13bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.studentBlackboardSimple/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.studentBlackboardSimple/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.studentBlackboardSimple/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.studentBlackboardSimple/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentBlackboardSimple/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/studentBlackboardSimple/Program.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,14 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="120">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
               <folding>
-                <marker date="1566262973753" expanded="true" signature="48:189" ph="{...}" />
-                <marker date="1566262973753" expanded="true" signature="68:187" ph="{...}" />
-                <marker date="1566262973753" expanded="true" signature="114:181" ph="{...}" />
+                <marker date="1566265294827" expanded="true" signature="48:196" ph="{...}" />
+                <marker date="1566265294827" expanded="true" signature="68:194" ph="{...}" />
+                <marker date="1566265294827" expanded="true" signature="114:188" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -36,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Student.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -44,6 +49,32 @@
               <folding>
                 <marker date="1566264186842" expanded="true" signature="33:83" ph="{...}" />
                 <marker date="1566264186842" expanded="true" signature="60:81" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Administrator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <folding>
+                <marker date="1566264384509" expanded="true" signature="33:89" ph="{...}" />
+                <marker date="1566264384509" expanded="true" signature="66:87" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Grade.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <folding>
+                <marker date="1566264475578" expanded="true" signature="33:81" ph="{...}" />
+                <marker date="1566264475578" expanded="true" signature="58:79" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -57,6 +88,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/studentBlackboardSimple/Person.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/studentBlackboardSimple/Student.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/studentBlackboardSimple/Administrator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/studentBlackboardSimple/Grade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/studentBlackboardSimple/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -64,13 +97,9 @@
       <list>
         <option value="$PROJECT_DIR$/studentBlackboardSimple/Person.cs" />
         <option value="$PROJECT_DIR$/studentBlackboardSimple/Student.cs" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/.idea.studentBlackboardSimple/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/studentBlackboardSimple/Administrator.cs" />
+        <option value="$PROJECT_DIR$/studentBlackboardSimple/Grade.cs" />
+        <option value="$PROJECT_DIR$/studentBlackboardSimple/Program.cs" />
       </list>
     </option>
   </component>
@@ -110,6 +139,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -157,12 +187,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566262957872</updated>
-      <workItem from="1566262969766" duration="1193000" />
+      <workItem from="1566262969766" duration="2283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1193000" />
+    <option name="totallyTimeSpent" value="2283000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -224,17 +254,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1566262973753" expanded="true" signature="48:189" ph="{...}" />
-            <marker date="1566262973753" expanded="true" signature="68:187" ph="{...}" />
-            <marker date="1566262973753" expanded="true" signature="114:181" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Person.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -253,6 +272,40 @@
           <folding>
             <marker date="1566264186842" expanded="true" signature="33:83" ph="{...}" />
             <marker date="1566264186842" expanded="true" signature="60:81" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Administrator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1566264384509" expanded="true" signature="33:89" ph="{...}" />
+            <marker date="1566264384509" expanded="true" signature="66:87" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Grade.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1566264475578" expanded="true" signature="33:81" ph="{...}" />
+            <marker date="1566264475578" expanded="true" signature="58:79" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentBlackboardSimple/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding>
+            <marker date="1566265294827" expanded="true" signature="48:196" ph="{...}" />
+            <marker date="1566265294827" expanded="true" signature="68:194" ph="{...}" />
+            <marker date="1566265294827" expanded="true" signature="114:188" ph="{...}" />
           </folding>
         </state>
       </provider>
