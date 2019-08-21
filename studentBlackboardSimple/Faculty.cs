@@ -1,6 +1,6 @@
 namespace studentBlackboardSimple
 {
-    public class Administrator
+    public class Faculty
     {
         
     }
