@@ -4,4 +4,4 @@ namespace studentBlackboardSimple
     {
         // has a streetNumber, city, state, zip and streetName
     }
-}
+} 

@@ -7,7 +7,7 @@ namespace studentBlackboardSimple
     {
         static void Main(string[] args)
         {
-            
+
             
         }
     }
