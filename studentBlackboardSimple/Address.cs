@@ -18,6 +18,10 @@ namespace studentBlackboardSimple
             State = state;
             Zipcode = zipcode;
         }
-        
+
+        public override string ToString()
+        {
+            return $"{HouseNumber} {StreetName} {City} {State} {Zipcode} ";
+        }
     }
 } 
