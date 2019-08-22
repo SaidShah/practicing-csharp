@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace studentBlackboardSimple
 {
@@ -6,6 +7,7 @@ namespace studentBlackboardSimple
     {
         static void Main(string[] args)
         {
+            
             
         }
     }

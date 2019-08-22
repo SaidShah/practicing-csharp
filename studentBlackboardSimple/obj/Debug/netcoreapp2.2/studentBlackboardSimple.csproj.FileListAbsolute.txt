@@ -1,0 +1,11 @@
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\bin\Debug\netcoreapp2.2\studentBlackboardSimple.deps.json
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\bin\Debug\netcoreapp2.2\studentBlackboardSimple.runtimeconfig.json
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\bin\Debug\netcoreapp2.2\studentBlackboardSimple.runtimeconfig.dev.json
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\bin\Debug\netcoreapp2.2\studentBlackboardSimple.dll
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\bin\Debug\netcoreapp2.2\studentBlackboardSimple.pdb
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\obj\Debug\netcoreapp2.2\studentBlackboardSimple.csprojAssemblyReference.cache
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\obj\Debug\netcoreapp2.2\studentBlackboardSimple.csproj.CoreCompileInputs.cache
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\obj\Debug\netcoreapp2.2\studentBlackboardSimple.AssemblyInfoInputs.cache
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\obj\Debug\netcoreapp2.2\studentBlackboardSimple.AssemblyInfo.cs
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\obj\Debug\netcoreapp2.2\studentBlackboardSimple.dll
+C:\Users\saidm\Desktop\Projects\studentBlackboardSimple\studentBlackboardSimple\obj\Debug\netcoreapp2.2\studentBlackboardSimple.pdb
