@@ -9,7 +9,7 @@ namespace studentBlackboardSimple
         private static int _idCounter=1;
         private Name Name { get; set; }
         private Address Address { get; set; }
-        protected string _id;
+        public string _id;
 
         public Person(Name name, Address address)
         {

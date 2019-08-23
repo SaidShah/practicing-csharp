@@ -74,6 +74,18 @@ namespace studentBlackboardSimple
                 }
             }
             
+            Persons p1 = new Persons();
+            p1.AddPerson(studentOne);
+            p1.AddPerson(studentTwo);
+            p1.AddPerson(facultyOne);
+            p1.AddPerson(facultyTwo);
+            
+            Person p2 = p1.GetPersonById("000001");
+            if (p2 != null)
+            {
+                Console.WriteLine("Student Found");
+                Console.WriteLine(p2.ToString());
+            }
         }
     }
 }
