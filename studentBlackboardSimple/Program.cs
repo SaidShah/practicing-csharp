@@ -41,6 +41,7 @@ namespace studentBlackboardSimple
             Console.WriteLine(c2.ToString());
             Console.WriteLine(c3.ToString());
             
+            
             studentOne.AddCourseTaking(c1);
             studentOne.AddCourseTaking(c4);
             studentOne.AddCourseTook(c5);
