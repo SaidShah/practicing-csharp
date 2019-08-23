@@ -55,7 +55,7 @@ namespace studentBlackboardSimple
             studentTwo.AddCoursesToTake(c5);
             studentTwo.AddCoursesToTake(c7);
             
-            Console.WriteLine("STUDENT ONE COURSES TOOK");
+            Console.WriteLine("COURSES STUDENT ONE TOOK");
             foreach (var eachCourse in studentOne.GetCoursesTook())
             {
                 if (eachCourse != null)
@@ -64,7 +64,7 @@ namespace studentBlackboardSimple
                 }
             }
             
-            Console.WriteLine("STUDENT ONE COURSES TAKING");
+            Console.WriteLine("COURSES STUDENT ONE IS TAKING");
             foreach (var eachCourse in studentOne.GetCoursesTaking())
             {
                 if (eachCourse != null)

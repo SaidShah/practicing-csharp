@@ -686,33 +686,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saidm\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback": {},
+    "C:\\Users\\Said Shah\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saidm\\Desktop\\Projects\\studentBlackboardSimple\\studentBlackboardSimple\\studentBlackboardSimple.csproj",
+      "projectUniqueName": "D:\\Personal Projects\\practicing-csharp\\studentBlackboardSimple\\studentBlackboardSimple.csproj",
       "projectName": "studentBlackboardSimple",
-      "projectPath": "C:\\Users\\saidm\\Desktop\\Projects\\studentBlackboardSimple\\studentBlackboardSimple\\studentBlackboardSimple.csproj",
-      "packagesPath": "C:\\Users\\saidm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saidm\\Desktop\\Projects\\studentBlackboardSimple\\studentBlackboardSimple\\obj\\",
+      "projectPath": "D:\\Personal Projects\\practicing-csharp\\studentBlackboardSimple\\studentBlackboardSimple.csproj",
+      "packagesPath": "C:\\Users\\Said Shah\\.nuget\\packages\\",
+      "outputPath": "D:\\Personal Projects\\practicing-csharp\\studentBlackboardSimple\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\saidm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Said Shah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.andculture.com/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
