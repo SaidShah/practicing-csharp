@@ -23,7 +23,7 @@ namespace studentBlackboardSimple
 
         public override string ToString()
         {
-            return $"Course Name: {Title}, Number: {CourseNumber}, Credits {NumCredits}\n";
+            return $"Course Name: {Title}\n Course Number: {CourseNumber}\n Credits {NumCredits}\n";
         }
     }
 }

@@ -15,7 +15,7 @@ namespace studentBlackboardSimple
         private readonly Course[] _coursesTook = new Course[10];
         private int _coursesTookElement;
 
-        private readonly Course[] _coursesTaking = new Course[10];
+        private Course[] _coursesTaking = new Course[10];
         private int _coursesTakingElements;
         
         private readonly Course[] _coursesToTake = new Course[10];
@@ -31,7 +31,7 @@ namespace studentBlackboardSimple
 
         public void AddCourseTaking(Course givenCourse)
         {
-            if (_coursesTaking.Length < 10)
+            if (_coursesTakingElements < 10)
             {
                 _coursesTaking[_coursesTakingElements] = givenCourse;
                 _coursesTakingElements++;
@@ -40,7 +40,7 @@ namespace studentBlackboardSimple
 
         public void AddCourseTook(Course course)
         {
-            if (_coursesTook.Length < 10)
+            if (_coursesTookElement < 10)
             {
                 _coursesTook[_coursesTookElement] = course;
                 _coursesTookElement++;
@@ -49,7 +49,7 @@ namespace studentBlackboardSimple
 
         public void AddCoursesToTake(Course course)
         {
-            if (_coursesToTake.Length < 10)
+            if (_coursesToTakeElements < 10)
             {
                 _coursesToTake[_coursesToTakeElements] = course;
                 _coursesToTakeElements++;

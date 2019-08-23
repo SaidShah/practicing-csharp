@@ -18,6 +18,61 @@ namespace studentBlackboardSimple
             Console.WriteLine(facultyOne.ToString());
             facultyTwo.Salary = "24000";
             Console.WriteLine(facultyTwo.ToString());
+            
+            Textbook t1 = new Textbook("Intro to java first edition", new Name("James", "Michael"), true,
+                "658-4521-956", 106.65);
+            Textbook t2 = new Textbook("Advanced programming 2nd edition", new Name("michael", "johnson"),
+                true, "125-4521-458", 125.52);
+            
+            Console.WriteLine(t1.ToString());
+            Console.WriteLine(t2.ToString());
+            
+            Course c1 = new Course("Intro to java", "CST111", 3);
+            Course c2 = new Course("Advanced Programming", "CST112", 4);
+            Course c3 = new Course("Pre-calculus", "MAT126", 3);
+            Course c4 = new Course("Algebra", "MAT145", 3);
+            Course c5 = new Course("Database", "CST172", 4);
+            Course c6 = new Course("English", "ENG101", 2);
+            Course c7 = new Course("Chemistry", "CHEM214", 3);
+            Course c8 = new Course("Physics", "PHY122", 5);
+            Course c9 = new Course("Science", "SCI115", 3);
+            
+            Console.WriteLine(c1.ToString());
+            Console.WriteLine(c2.ToString());
+            Console.WriteLine(c3.ToString());
+            
+            studentOne.AddCourseTaking(c1);
+            studentOne.AddCourseTaking(c4);
+            studentOne.AddCourseTook(c5);
+            studentOne.AddCourseTook(c3);
+            studentOne.AddCoursesToTake(c8);
+            studentOne.AddCoursesToTake(c9);
+            
+            studentTwo.AddCourseTaking(c8);
+            studentTwo.AddCourseTaking(c4);
+            studentTwo.AddCourseTook(c2);    
+            studentTwo.AddCourseTook(c6);
+            studentTwo.AddCoursesToTake(c5);
+            studentTwo.AddCoursesToTake(c7);
+            
+            Console.WriteLine("STUDENT ONE COURSES TOOK");
+            foreach (var eachCourse in studentOne.GetCoursesTook())
+            {
+                if (eachCourse != null)
+                {
+                    Console.WriteLine(eachCourse.ToString());
+                }
+            }
+            
+            Console.WriteLine("STUDENT ONE COURSES TAKING");
+            foreach (var eachCourse in studentOne.GetCoursesTaking())
+            {
+                if (eachCourse != null)
+                {
+                    Console.WriteLine(eachCourse.ToString());
+                }
+            }
+            
         }
     }
 }
