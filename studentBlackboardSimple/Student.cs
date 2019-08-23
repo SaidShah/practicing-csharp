@@ -73,7 +73,7 @@ namespace studentBlackboardSimple
 
         public override string ToString()
         {
-            return "Name: " + Name + " Address: " + Address + " PhoneNumber: " + PhoneNumber + " Major: " + Major + "\n";
+            return "Student -> Name: " + Name + " Address: " + Address + " PhoneNumber: " + PhoneNumber + " Major: " + Major + " Id Number: " + _id + "\n";
         }
     }
 }

@@ -6,10 +6,10 @@ namespace studentBlackboardSimple
     public class Person
     {
         // has an id, phone, Name, Address and static idCounter to set each id
-        private static int _idCounter;
+        private static int _idCounter=1;
         private Name Name { get; set; }
         private Address Address { get; set; }
-        private string _id;
+        protected string _id;
 
         public Person(Name name, Address address)
         {
