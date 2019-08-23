@@ -21,7 +21,7 @@ namespace studentBlackboardSimple
 
         public override string ToString()
         {
-            return $"{Title}, By: {Name}, ISBN: {Isbn} ${Price} ";
+            return $"{Title}, By: {Name}, ISBN: {Isbn} ${Price} \n";
         }
     }
 }

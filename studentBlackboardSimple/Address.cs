@@ -21,7 +21,7 @@ namespace studentBlackboardSimple
 
         public override string ToString()
         {
-            return $"{HouseNumber} {StreetName} {City} {State} {Zipcode} ";
+            return $"{HouseNumber} {StreetName} {City} {State} {Zipcode} \n";
         }
     }
 } 

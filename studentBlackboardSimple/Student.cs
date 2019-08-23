@@ -2,7 +2,7 @@ using System;
 
 namespace studentBlackboardSimple
 {
-    public class Student
+    public class Student:Person
     {
         // has a Name, Address, phone number, and major(enum)
         // has coursesTook array, coursesTaking array, and coursesToTake array -> all are grade classes
@@ -12,16 +12,16 @@ namespace studentBlackboardSimple
         private string PhoneNumber { get; set; }
         private string Major { get; set; }
 
-        private Course[] _coursesTook = new Course[10];
+        private readonly Course[] _coursesTook = new Course[10];
         private int _coursesTookElement;
 
-        private Course[] _coursesTaking = new Course[10];
+        private readonly Course[] _coursesTaking = new Course[10];
         private int _coursesTakingElements;
         
-        private Course[] _coursesToTake = new Course[10];
+        private readonly Course[] _coursesToTake = new Course[10];
         private int _coursesToTakeElements;
 
-        public Student(Name name, Address address, string phoneNumber, string major)
+        public Student(Name name, Address address, string phoneNumber, string major):base(name, address)
         {
             Name = name;
             Address = address;
@@ -29,7 +29,7 @@ namespace studentBlackboardSimple
             Major = major;
         }
 
-        public void addCourseTaking(Course givenCourse)
+        public void AddCourseTaking(Course givenCourse)
         {
             if (_coursesTaking.Length < 10)
             {
@@ -38,16 +38,16 @@ namespace studentBlackboardSimple
             }
         }
 
-        public void addCourseTook(Course course)
+        public void AddCourseTook(Course course)
         {
             if (_coursesTook.Length < 10)
             {
-                _coursesTaking[_coursesTookElement] = course;
+                _coursesTook[_coursesTookElement] = course;
                 _coursesTookElement++;
             }
         }
 
-        public void addCoursesToTake(Course course)
+        public void AddCoursesToTake(Course course)
         {
             if (_coursesToTake.Length < 10)
             {
@@ -56,24 +56,24 @@ namespace studentBlackboardSimple
             }
         }
 
-        public Course[] getCoursesToTake()
+        public Course[] GetCoursesToTake()
         {
             return _coursesToTake;
         }
 
-        public Course[] getCoursesTook()
+        public Course[] GetCoursesTook()
         {
             return _coursesTook;
         }
 
-        public Course[] getCoursesTaking()
+        public Course[] GetCoursesTaking()
         {
             return _coursesTaking;
         }
 
         public override string ToString()
         {
-            return "Name: " + Name + " Address: " + Address + " PhoneNumber: " + PhoneNumber + " Major: " + Major;
+            return "Name: " + Name + " Address: " + Address + " PhoneNumber: " + PhoneNumber + " Major: " + Major + "\n";
         }
     }
 }

@@ -20,6 +20,10 @@ namespace studentBlackboardSimple
             CourseNumber = courseNumber;
             NumCredits = numCredits;
         }
-        
+
+        public override string ToString()
+        {
+            return $"Course Name: {Title}, Number: {CourseNumber}, Credits {NumCredits}\n";
+        }
     }
 }

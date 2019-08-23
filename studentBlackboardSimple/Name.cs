@@ -37,7 +37,12 @@ namespace studentBlackboardSimple
 
             public override string ToString()
             {
-                return FirstName + " " + GetMiddleInitial() + " " + LastName;
+                if (string.IsNullOrWhiteSpace(GetMiddleInitial()))
+                {
+                    return FirstName + " "+ LastName + "\n";
+                }
+                
+                return FirstName + " " + GetMiddleInitial() + " " + LastName + "\n";
             }
     }
 }
