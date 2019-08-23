@@ -24,5 +24,11 @@ namespace studentBlackboardSimple
             HasProjector = hasProjector;
             BuildingNumber = buildingNumber;
         }
+
+        public override string ToString()
+        {
+            return
+                $"Room number: {RoomNumber} Has a projector: {HasProjector} Building number: {BuildingNumber} Has a computer lab: {IsComputerLab} Total seats: {NumberOfSeats}\n";
+        }
     }
 }
