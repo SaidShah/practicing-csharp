@@ -71,6 +71,21 @@ namespace studentBlackboardSimple
             return _coursesTaking;
         }
 
+        public static void GetTuitionPayment<T>(ref T billAmount, ref T payedToday)
+        {
+            var owed = Convert.ToInt32(billAmount);
+            var paid = Convert.ToInt32(payedToday);
+            var balance = owed - paid;
+            if (balance > 0)
+            {
+                Console.WriteLine($"total owed: ${balance}");
+            }
+            else
+            {
+                Console.WriteLine($"We owe you: ${balance}");
+            }
+        }
+
         public override string ToString()
         {
             return "Student -> Name: " + Name + " Address: " + Address + " PhoneNumber: " + PhoneNumber + " Major: " + Major + " Id Number: " + _id + "\n";

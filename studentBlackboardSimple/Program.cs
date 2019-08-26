@@ -111,6 +111,47 @@ namespace studentBlackboardSimple
                 Console.WriteLine($"Item key = {item.Key} ");
                 Console.WriteLine($"Item Value = {item.Value} ");
             }
+            
+            
+            // below we are using an array list to add the students and faculty
+            List<Person> personList = new List<Person> {studentOne, studentTwo, facultyOne, facultyTwo};
+            foreach (var eachPerson in personList)
+            {
+                Console.WriteLine(eachPerson.ToString());
+            }
+            Console.WriteLine($"person list has {personList.Count} people");
+            personList.RemoveAt(1);
+            Console.WriteLine($"person list has {personList.Count} people after removing 1");
+            
+            personList.Insert(1,new Student(new Name("Bugs","Bunny"),new Address(27, "peanut st", "Park Slope ","NY",12458),"718-232-5648","Engineering" ));
+            foreach (var eachPerson in personList)
+            {
+                Console.WriteLine(eachPerson.ToString());
+            }
+            
+            // you can use generic data types when using collections like so 
+//            Queue<T> persons = new Queue<T>();
+//            Stack<J> allPersons = new Stack<J>();
+//            Dictionary<Tkey,Tvalue> allPersons = new Dictionary<Tkey,Tvalue>();
+            
+            // this method is in student class and is a generic method
+            // below we are also using a refrenece to the variables
+            // because we are using generics we will use the same method for many data types
+            var tuitionPayment = 200;
+            var moneyAvailable = 120;
+            Student.GetTuitionPayment( ref tuitionPayment, ref moneyAvailable);
+
+            string tPayment = "300";
+            string moneyAvail = "134";
+            Student.GetTuitionPayment(ref tPayment,ref moneyAvail);
+
+
+
+
+
+
+
+
         }
     }
 }
