@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace studentBlackboardSimple
 {
@@ -148,12 +149,34 @@ namespace studentBlackboardSimple
             // using a generic struct to add 2 numbers together
             Arithmatic<int>.GetSum(23,53);
             Arithmatic<string>.GetSum("324","33");
-            
+
+            DelegateMethod firstNum, secondNum, total;
+            firstNum = new DelegateMethod(Add);
+            secondNum = new DelegateMethod(Subtract);
+            total = firstNum + secondNum;
+            firstNum(3,3);
+            secondNum(8, 4);
+            // you can chain the delegate methods so calling the below method will run both of the methods
+            total(8, 4);
 
 
 
 
 
+
+
+        }
+        // using delegate to add and manipulate methods
+        public delegate void DelegateMethod(double firstNum, double secondNum);
+
+        public static void Add(double num1, double num2)
+        {
+            Console.WriteLine("using delegate method to add {0}" ,(num1 + num2));
+        }
+
+        public static void Subtract(double num1, double num2)
+        {
+            Console.WriteLine("using delegate method to Subtract {0}" ,(num1 - num2));
         }
     }
 }
