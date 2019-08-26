@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace studentBlackboardSimple
@@ -85,6 +86,30 @@ namespace studentBlackboardSimple
             {
                 Console.WriteLine("Student Found");
                 Console.WriteLine(p2.ToString());
+            }
+            Vehicle toyota = new Vehicle("Toyota",4,150);
+            // to check to see if you can use the interface for a specific object check like below
+            if (toyota is IDriveable)
+            {
+                toyota.Move();
+                toyota.Stop();
+            }
+            
+            // Dictionary is a key value pair
+            Dictionary<string, string> superheros = new Dictionary<string, string>();
+            superheros.Add("spider-man","spider-man-junior");
+            superheros.Add("Bruce Wayne","Batman");
+            superheros.Add("Barry West","Some superhero");
+            Console.WriteLine(superheros.Count);
+            superheros.Remove("Barry West");
+            Console.WriteLine(superheros.Count);
+            Console.WriteLine(superheros.ContainsKey("Bruce Wayne"));
+            superheros.TryGetValue("spider-man", out string test);
+            Console.WriteLine($"spider-man {test}");
+            foreach (KeyValuePair<string,string> item in superheros)
+            {
+                Console.WriteLine($"Item key = {item.Key} ");
+                Console.WriteLine($"Item Value = {item.Value} ");
             }
         }
     }
