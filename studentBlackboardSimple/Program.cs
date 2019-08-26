@@ -145,8 +145,10 @@ namespace studentBlackboardSimple
             string moneyAvail = "134";
             Student.GetTuitionPayment(ref tPayment,ref moneyAvail);
 
-
-
+            // using a generic struct to add 2 numbers together
+            Arithmatic<int>.GetSum(23,53);
+            Arithmatic<string>.GetSum("324","33");
+            
 
 
 
