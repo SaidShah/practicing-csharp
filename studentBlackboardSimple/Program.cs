@@ -301,6 +301,7 @@ namespace studentBlackboardSimple
                     Console.WriteLine(" {0}",animal);
                 }
             }
+            // SERIALIZING AND WRITING OBJECT TO FILE
             
             Student student = new Student(new Name("Bill","Haider"), new Address(23,"leslie st","Philly","PA",17512), "6325654897", "English");
             // below will be the data file, binary file, it has to be a .dat file
@@ -310,6 +311,9 @@ namespace studentBlackboardSimple
             bf.Serialize(stream,student);
             // below we are closing the stream of data
             stream.Close();
+    
+            // DESERIALIZING AND READING THE OBJECTS FROM THE FILE
+    
             // below we are opening the file
             stream = File.Open("Student.dat", FileMode.Open);
             bf = new BinaryFormatter();
