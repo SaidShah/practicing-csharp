@@ -28,12 +28,16 @@ namespace studentBlackboardSimple
 
         public void SetId()
         {
+            if (_id > 4)
+            {
+                _id = 1;
+            }
             DogId = _id++;
         }
 
         public override string ToString()
         {
-            return $"Dog Name {Name} Height {Height} Is Neutered {IsNeutered} ID Number {_id}";
+            return $"Dog Name {Name} Height {Height} Is Neutered {IsNeutered} ID Number {DogId}";
         }
     }
 }

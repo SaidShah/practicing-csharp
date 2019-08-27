@@ -242,13 +242,62 @@ namespace studentBlackboardSimple
                 Console.WriteLine(animal.ToString());
             }
 
+            Console.WriteLine();
+            List<Animal> animalList = new List<Animal>
+            {
+                new Animal("Scooby Doo",43,true),new Animal("Snoopy",12,true),
+                new Animal("Brian Griffin",22,false), new Animal("Lassie",48,true),
+                new Animal("Garfield",52,true), new Animal("K 9", 88, true)
+            };
+            List<Owner> ownerArray = new List<Owner>
+            {
+                new Owner("John"), new Owner("Mike"), new Owner("Sally"), new Owner("James"), new Owner("Michelle"), new Owner("Superman")
+            };
+            
+            // to grab values out of a collection the parent collection should be a list or an array
+            var nameHeight = from anim in animalList
+                            select new {anim.Name, anim.Height};
 
+            foreach (var a in nameHeight)
+            {
+                Console.WriteLine(a);
+            }
 
+            Console.WriteLine();
+            // to convert into an array you can do 
+            Array newNameHeight = nameHeight.ToArray();
+            foreach (var eachAnim in newNameHeight)
+            {
+                Console.WriteLine(eachAnim.ToString());
+            }
+            
+            // you can also do inner, outter and full joins 
+            Console.WriteLine();
+            var joinQuery = from animal in animalList
+                join owner in ownerArray on animal.DogId equals owner.OwnerId
+                select new {OwnerName = owner.Name, AnimalName = animal.Name};
+            foreach (var dogOwner in joinQuery)
+            {
+                Console.WriteLine(dogOwner);
+            }
+            
+            // you can also do a group join to take all matching objects
+            var groupJoin = from owner in ownerArray
+                orderby owner.OwnerId
+                join animal in animalList
+                    on owner.OwnerId equals animal.DogId
+                    into ownerGroup
+                select new {Owner = owner.Name, Animals = from owner2 in ownerGroup orderby  owner2.Name select owner2};
 
-
-
-
-
+            Console.WriteLine();
+            foreach (var owner in groupJoin)
+            {
+                Console.WriteLine(owner.Owner);
+                foreach (var animal in owner.Animals)
+                {
+                    Console.WriteLine(" {0}",animal);
+                }
+            }
 
 
 
