@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -298,9 +301,19 @@ namespace studentBlackboardSimple
                     Console.WriteLine(" {0}",animal);
                 }
             }
-
-
-
+            
+            Student student = new Student(new Name("Bill","Haider"), new Address(23,"leslie st","Philly","PA",17512), "6325654897", "English");
+            Stream stream = File.Open("Student.dat", FileMode.Create);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(stream,student);
+            stream.Close();
+            student = null;
+            stream = File.Open("Student.dat", FileMode.Open);
+            bf = new BinaryFormatter();
+            student = (Student) bf.Deserialize(stream);
+            stream.Close();
+            Console.WriteLine(student.ToString());
+            
 
 
 

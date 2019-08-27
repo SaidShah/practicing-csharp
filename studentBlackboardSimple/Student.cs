@@ -1,8 +1,11 @@
 using System;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace studentBlackboardSimple
 {
-    public class Student:Person
+    [Serializable()]
+    public class Student:Person, ISerializable
     {
         // has a Name, Address, phone number, and major(enum)
         // has coursesTook array, coursesTaking array, and coursesToTake array -> all are grade classes
@@ -21,6 +24,8 @@ namespace studentBlackboardSimple
         private readonly Course[] _coursesToTake = new Course[10];
         private int _coursesToTakeElements;
 
+//        public Student()
+//            : this(new Name(" "," "), new Address(4," "," "," ",0),"34334","no major"){}
         public Student(Name name, Address address, string phoneNumber, string major):base(name, address)
         {
             Name = name;
@@ -28,6 +33,7 @@ namespace studentBlackboardSimple
             PhoneNumber = phoneNumber;
             Major = major;
         }
+        
 
         public void AddCourseTaking(Course givenCourse)
         {
@@ -86,6 +92,22 @@ namespace studentBlackboardSimple
             }
         }
 
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {// serializing data to write as binary to a file
+            info.AddValue("Name",Name);
+            info.AddValue("Address",Address);
+            info.AddValue("PhoneNumber",PhoneNumber);
+            info.AddValue("Major",Major);
+        }
+
+        // rebuilding the object
+        public Student(SerializationInfo info, StreamingContext context)
+        {
+            Name = (Name) info.GetValue("Name", typeof(Name));
+            Address = (Address) info.GetValue("Address", typeof(Address));
+            PhoneNumber = (string) info.GetValue("PhoneNumber", typeof(string));
+            Major = (string) info.GetValue("Major", typeof(string));
+        }
         public override string ToString()
         {
             return "Student -> Name: " + Name + " Address: " + Address + " PhoneNumber: " + PhoneNumber + " Major: " + Major + " Id Number: " + _id + "\n";

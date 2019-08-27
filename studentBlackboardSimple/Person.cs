@@ -11,6 +11,11 @@ namespace studentBlackboardSimple
         private Address Address { get; set; }
         public string _id;
 
+        public Person()
+        {
+            
+        }
+
         public Person(Name name, Address address)
         {
             Name = name;

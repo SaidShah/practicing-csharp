@@ -1,6 +1,12 @@
+using System;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
+
 namespace studentBlackboardSimple
 {
-    public class Address
+    [Serializable()]
+    public class Address:ISerializable // implementing the ISerializable interface
     {
         // has a houseNumber, streetName, city, state, zip
         
@@ -23,5 +29,24 @@ namespace studentBlackboardSimple
         {
             return $"{HouseNumber} {StreetName} {City} {State} {Zipcode} \n";
         }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("HouseNumber",HouseNumber);
+            info.AddValue("City",City);
+            info.AddValue("State",State);
+            info.AddValue("Zipcode",Zipcode);
+            info.AddValue("StreetName",StreetName);
+        }
+
+        public Address(SerializationInfo info, StreamingContext context)
+        {
+            HouseNumber = (int) info.GetValue("HouseNumber",typeof(int));
+            City = (string) info.GetValue("City", typeof(string));
+            State = (string) info.GetValue("State", typeof(string));
+            Zipcode = (int) info.GetValue("Zipcode", typeof(int));
+            StreetName = (string) info.GetValue("StreetName", typeof(string));
+        }
+
     }
 } 

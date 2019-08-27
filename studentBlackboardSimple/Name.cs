@@ -1,8 +1,11 @@
 using System;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace studentBlackboardSimple
 {
-    public class Name
+    [Serializable()]
+    public class Name:ISerializable
     {
             // has a firstName, lastName and middleInitial
 
@@ -43,6 +46,18 @@ namespace studentBlackboardSimple
                 }
                 
                 return FirstName + " " + GetMiddleInitial() + " " + LastName + "\n";
+            }
+
+            public void GetObjectData(SerializationInfo info, StreamingContext context)
+            {
+                info.AddValue("FirstName",FirstName);
+                info.AddValue("LastName",LastName);
+            }
+
+            public Name(SerializationInfo info, StreamingContext context)
+            {
+                FirstName = (string) info.GetValue("FirstName", typeof(string));
+                LastName = (string) info.GetValue("LastName", typeof(string));
             }
     }
 }
