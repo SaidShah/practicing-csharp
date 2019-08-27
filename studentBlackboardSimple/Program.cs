@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
 namespace studentBlackboardSimple
@@ -149,7 +150,9 @@ namespace studentBlackboardSimple
             // using a generic struct to add 2 numbers together
             Arithmatic<int>.GetSum(23,53);
             Arithmatic<string>.GetSum("324","33");
-
+            
+            
+            // the Delegate method is all the way on the bottom
             DelegateMethod firstNum, secondNum, total;
             firstNum = new DelegateMethod(Add);
             secondNum = new DelegateMethod(Subtract);
@@ -158,6 +161,51 @@ namespace studentBlackboardSimple
             secondNum(8, 4);
             // you can chain the delegate methods so calling the below method will run both of the methods
             total(8, 4);
+
+
+            // using lambda expressions, they are expressions where the value is assigned on the left
+            // and the method signature is on the right
+
+            doubleIt dblIt = x => x * x;
+            Console.WriteLine("using the doubleIt delegate and lambda to double a num 4 * 4 = {0}",dblIt(4));
+
+            // you dont have to use delegates for a lambda expression 
+            List<int> numList = new List<int>{1,2,3,4,5,45,6,94,6546,64,496,5498,48964,34};
+            // below we are checking for even numbers then converting it to a list
+            var evenNums = numList.Where(x => x % 2 == 0).ToList();
+            foreach (var x in evenNums)
+            {
+                Console.Write($"{x}, ");
+            }
+            Console.WriteLine();
+            // below we are using the lambda and the where to look for a range
+            var rangeNums = numList.Where(x => (x > 4) && (x < 50)).ToList();
+            foreach (var w in rangeNums)
+            {
+                Console.Write($"{w}, ");
+            }
+
+            // you can also use .Select to perform an operation on each item in a collection
+            // you can also use .Zip to perform an operation on 2 collections
+            // you can also use .Aggregate to perform operations on collections
+            // other Linq methods 
+            // .AsQueryable.Average => to get the average of a list
+            // .All to check if all values in a collection meet a condition
+            // .Any to check if any values meet a condition
+            // .Distinct used to eliminate duplicates from a collection
+            // .Except will take 2 lists and return values not found in the second list
+            // .Intersect will take 2 lists and return values found in both lists
+            
+            
+
+
+
+
+
+
+
+
+
 
 
 
@@ -178,5 +226,7 @@ namespace studentBlackboardSimple
         {
             Console.WriteLine("using delegate method to Subtract {0}" ,(num1 - num2));
         }
+
+        delegate double doubleIt(double givenNum);
     }
 }
