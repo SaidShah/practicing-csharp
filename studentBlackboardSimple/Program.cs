@@ -303,14 +303,19 @@ namespace studentBlackboardSimple
             }
             
             Student student = new Student(new Name("Bill","Haider"), new Address(23,"leslie st","Philly","PA",17512), "6325654897", "English");
+            // below will be the data file, binary file, it has to be a .dat file
             Stream stream = File.Open("Student.dat", FileMode.Create);
+            // binary formatter will write the data
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(stream,student);
+            // below we are closing the stream of data
             stream.Close();
-            student = null;
+            // below we are opening the file
             stream = File.Open("Student.dat", FileMode.Open);
             bf = new BinaryFormatter();
+            // below we are deserializing the data
             student = (Student) bf.Deserialize(stream);
+            // below we are closing the stream
             stream.Close();
             Console.WriteLine(student.ToString());
             
