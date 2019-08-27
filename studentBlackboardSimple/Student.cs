@@ -98,6 +98,7 @@ namespace studentBlackboardSimple
             info.AddValue("Address",Address);
             info.AddValue("PhoneNumber",PhoneNumber);
             info.AddValue("Major",Major);
+            info.AddValue("_id",_id);
         }
 
         // rebuilding the object
@@ -107,6 +108,7 @@ namespace studentBlackboardSimple
             Address = (Address) info.GetValue("Address", typeof(Address));
             PhoneNumber = (string) info.GetValue("PhoneNumber", typeof(string));
             Major = (string) info.GetValue("Major", typeof(string));
+            _id = (string) info.GetValue("_id", typeof(string));
         }
         public override string ToString()
         {
