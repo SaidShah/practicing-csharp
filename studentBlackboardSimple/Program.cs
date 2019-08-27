@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 
 namespace studentBlackboardSimple
@@ -196,7 +198,50 @@ namespace studentBlackboardSimple
             // .Except will take 2 lists and return values not found in the second list
             // .Intersect will take 2 lists and return values found in both lists
             
+            // USING LINQ FUNCTIONS => WHICH ARE ESSENTIALLY QUERIES THAT CAN BE USED ON DATA 
             
+            
+            Console.WriteLine();
+            Animal a1 = new Animal("john", 23, true);
+            Console.WriteLine(a1.ToString());
+            string[] dogs =
+                {"K 9", "Scooby Doo", "Brian Griffin", "Lassie", "Rin Tin Tin", "Benji", "Snoopy", "Charlie B. Barkin"};
+
+            var dogSpaces = from dog in dogs where dog.Contains(" ") orderby dog descending select dog;
+            foreach (var dog in dogSpaces)
+            {
+                Console.Write($"{dog}, ");
+            }
+
+            Console.WriteLine();
+
+            int[] intArray = {23, 43, 54, 34, 5, 64, 6, 87, 65, 45645, 67, 657, 56, 67, 56};
+            var smallNumArray = from num in intArray where num > 50 orderby num select num;
+            foreach (var num in smallNumArray)
+            {
+                Console.Write($"{num}, ");
+            }
+            // you can convert to list or to array ToArray() or ToList<int>();
+            int[] smallNums = smallNumArray.ToArray();
+
+            ArrayList animals = new ArrayList
+            {
+                new Animal("Scooby Doo",43,true),new Animal("Snoopy",12,true),
+                new Animal("Brian Griffin",22,false), new Animal("Lassie",48,true)
+            };
+
+            Console.WriteLine();
+            // you have to convert the array list into an enumerable 
+            var famousAnimals = animals.OfType<Animal>();
+            var smallAnimals = from animal in famousAnimals
+                where animal.Height < 40
+                orderby animal.Height ascending
+                select animal;
+            foreach (var animal in smallAnimals)
+            {
+                Console.WriteLine(animal.ToString());
+            }
+
 
 
 
